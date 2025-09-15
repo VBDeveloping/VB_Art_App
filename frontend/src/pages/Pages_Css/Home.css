@@ -1,0 +1,10 @@
+.Home_Container {
+  min-height: 100vh;
+}
+
+.Home_Main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-top: 120px;
+  padding-bottom: 32px;
+}

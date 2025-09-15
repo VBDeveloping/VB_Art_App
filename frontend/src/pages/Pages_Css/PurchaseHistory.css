@@ -1,0 +1,112 @@
+.PurchaseHistory_Container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 80px 20px 20px 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.PurchaseHistory_Header h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+.PurchaseHistory_List {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.PurchaseHistory_Item {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.PurchaseHistory_Item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.PurchaseHistory_Details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1em;
+}
+
+.PurchaseHistory_Details span {
+    font-weight: 500;
+}
+
+.PurchaseHistory_Date, .PurchaseHistory_Total, .PurchaseHistory_Items {
+    color: #555;
+}
+
+.PurchaseHistory_Total {
+    font-weight: bold;
+    color: #27ae60;
+}
+
+.loading-message, .error-message {
+    text-align: center;
+    font-size: 1.2em;
+    padding: 50px;
+    color: #777;
+}
+
+.error-message {
+    color: #c0392b;
+    font-weight: bold;
+}
+
+.PurchaseHistory_Empty {
+    text-align: center;
+    padding: 50px;
+}
+
+.PurchaseHistory_Empty p {
+    font-size: 1.2em;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.PurchaseHistory_Link {
+    text-decoration: none;
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.PurchaseHistory_Link:hover {
+    background-color: #2980b9;
+}
+
+.unauthorized {
+    text-align: center;
+    padding: 120px 20px 20px 20px;
+    color: #e74c3c;
+}
+
+.unauthorized h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.unauthorized p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}

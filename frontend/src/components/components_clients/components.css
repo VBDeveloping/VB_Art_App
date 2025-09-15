@@ -1,0 +1,428 @@
+/* CSS do Header */
+.Header_Container {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    z-index: 1000;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 24px 32px 16px 32px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.Header_Logo {
+    flex: 0 0 auto;
+}
+
+.Header_Logo_Link {
+    text-decoration: none;
+}
+
+.Header_Logo h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.Header_Logo_Link:hover h1 {
+    color: rgb(160, 85, 85);
+}
+
+.Header_Search_Wrapper {
+    display: flex;
+    flex: 1 1 0;
+    align-items: center;
+    background: #f3f3f3;
+    border-radius: 24px;
+    padding: 8px 20px;
+    min-width: 0;
+    max-width: 320px;
+    gap: 8px;
+    margin: 0 24px;
+    transition: box-shadow 0.3s ease;
+}
+
+.Header_Search_Wrapper:focus-within {
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.Header_Search_Icon {
+    font-size: 1.2rem;
+    color: #888;
+}
+
+.Header_Search_Input {
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.Header_Auth_Cart {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    gap: 16px;
+}
+
+.Header_Auth_Button,
+.Header_Auth_Icon,
+.Header_Cart_Icon {
+    font-size: 1.6rem;
+    color: #222;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.Header_Auth_Button:hover,
+.Header_Auth_Icon:hover,
+.Header_Cart_Icon:hover {
+    color: #007bff;
+}
+
+.Header_User_Menu {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.Header_User_Name {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.Header_Dropdown_Content {
+    position: absolute;
+    top: calc(100% + 15px);
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 9999; 
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.Header_Dropdown_Link,
+.Header_Dropdown_Button {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    transition: background-color 0.2s;
+}
+
+.Header_Dropdown_Link:hover,
+.Header_Dropdown_Button:hover {
+    background-color: #ddd;
+}
+
+@media (max-width: 768px) {
+    .Header_Container {
+        flex-direction: column;
+        padding: 16px 20px;
+        align-items: flex-start;
+        height: auto;
+    }
+
+    .Header_Logo {
+        margin-bottom: 12px;
+    }
+
+    .Header_Search_Wrapper {
+        width: 100%;
+        max-width: none;
+        margin: 0 0 16px 0;
+    }
+
+    .Header_Auth_Cart {
+        width: 100%;
+        justify-content: space-between;
+        gap: 0;
+    }
+
+    .Header_User_Menu {
+        gap: 8px;
+    }
+
+    .Header_Dropdown_Content {
+        top: 100%;
+        right: auto;
+        left: 0;
+        margin-top: 5px;
+        min-width: 100%;
+    }
+}
+
+/* CSS do ProductList */
+
+.ProductList_Container {
+  width: 100vw;
+  max-width: none;
+  padding: 32px 0 0 0;
+  margin-left: calc(-50vw + 50%);
+}
+
+.ProductList_Title {
+  font-size: 1.7rem;
+  font-weight: 540;
+  color: #222;
+  margin-bottom: 32px;
+  margin-left: 8px;
+  padding-left: 30px;
+}
+
+.ProductList_Grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 32px;
+  justify-items: center;
+}
+
+.ProductList_Link {
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .ProductList_Grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .ProductList_Grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* CSS do Card */
+
+.Card_Container {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  padding: 18px 18px 14px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 210px;
+  min-height: 320px;
+  transition: box-shadow 0.2s;
+}
+
+.Card_Container:hover {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+}
+
+.Card_Image {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 18px;
+  background: #f3f3f3;
+}
+
+.Card_Title {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #222;
+  margin: 0 0 8px 0;
+  text-align: center;
+  text-decoration: none;
+}
+
+.Card_Price {
+  font-size: 1rem;
+  color: #222;
+  font-weight: 400;
+  margin: 0;
+  text-align: center;
+  text-decoration: none;
+}
+
+.Card_Link {
+    text-decoration: none;
+    color: inherit; 
+}
+
+.Card_Link:hover .Card_Container {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+
+/* CSS do Footer */
+
+.Footer_Container {
+
+  width: 100%;
+  background: #1a202c;
+  color: #fff;
+  padding: 32px 0 16px 0;
+  margin-top: 48px;
+  text-align: center;
+}
+
+.Footer_Text {
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+@media (max-width: 768px) {
+    .Footer_Container {
+        padding: 24px 0 12px 0;
+    }
+}
+
+/* CSS do Auth */
+
+.Auth_Modal_Overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Container do formulário */
+.Auth_Form_Wrapper {
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Botão de fechar */
+.Auth_Close_Button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #999;
+    padding: 0;
+}
+
+.Auth_Close_Button:hover {
+    color: #333;
+}
+
+/* Título do formulário */
+.Auth_Form_Wrapper h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+    color: #333;
+}
+
+/* Agrupamento de input */
+.Auth_Input_Group {
+    text-align: left;
+    margin-bottom: 20px;
+    position: relative; /* Para a transição do placeholder */
+}
+
+.Auth_Input_Group label {
+    display: block;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 8px;
+    transition: all 0.2s ease;
+}
+
+/* Estilo do input */
+.Auth_Input_Group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.Auth_Input_Group input:focus {
+    outline: none;
+    border-color: #000;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo do botão de submissão */
+.Auth_Button {
+    width: 100%;
+    padding: 14px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.Auth_Button:hover {
+    background-color: #333;
+}
+
+/* Troca de view (login/cadastro) */
+.Auth_Switch_View {
+    margin-top: 24px;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.Auth_Switch_View span {
+    color: #000;
+    cursor: pointer;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.Auth_Switch_View span:hover {
+    color: #555;
+}
