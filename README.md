@@ -46,3 +46,21 @@ Certifique-se de ter o **Node.js** e o **PostgreSQL** instalados.
 git clone [https://github.com/VBDeveloping/VB_Art_App.git](https://github.com/VBDeveloping/VB_Art_App.git)
 cd VB_Art_App
 
+### 2. Configurar o Banco de Dados
+
+Crie um banco de dados vazio no PostgreSQL e execute os scripts SQL para criar as tabelas necessárias: users, products, orders, order_items, etc.
+
+
+### 3. Configurar as Variáveis de Ambiente
+Na pasta raiz do projeto, crie um arquivo chamado .env e adicione as suas credenciais do banco de dados:
+
+DB_USER=seu_usuario
+DB_HOST=seu_host_do_banco
+DB_DATABASE=seu_banco_de_dados
+DB_PASSWORD=sua_senha
+DB_PORT=5432
+
+### 4. Instalar Dependências e Iniciar
+Abra dois terminais na pasta raiz do projeto, um para backend e outro para frontend.
+
+A aplicação web estará disponível em http://localhost:3000.
