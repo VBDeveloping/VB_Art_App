@@ -68,6 +68,18 @@ router.post('/', async (req, res) => {
     }
 });
 
+//Rota para buscar todos os produtos
+
+router.get('/', async (req, res) => {
+    try {
+        const result = await pool.query('SELECT * FROM products ORDER BY name ASC');
+        res.status(200).json(result.rows);
+    } catch (error) {
+        console.error('Erro ao buscar produtos:', error);
+        res.status(500).json({ success: false, message: 'Erro interno do servidor.' });
+    }
+});
+
 // Rota para editar um produto (PUT /api/products/:id)
 router.put('/:id', async (req, res) => {
     const { id } = req.params;
