@@ -41,7 +41,7 @@ Certifique-se de ter instalados:
 - **PostgreSQL** 
 - **Git**
 
-### 1 Clonar o Repositório
+### Clonar o Repositório
 
 ```bash
 git clone [https://github.com/VBDeveloping/VB_Art_App.git](https://github.com/VBDeveloping/VB_Art_App.git)
