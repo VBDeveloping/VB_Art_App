@@ -94,6 +94,25 @@ Esse painel facilita o controle dos itens da loja, dispensando a necessidade de 
 
 ---
 
+🚧 Próximos Passos e Futuras Implementações
+O VB Art Shop é um projeto em constante evolução. Aqui estão algumas das funcionalidades que estão planejadas para o futuro:
+
+- Implementação de Filtros Avançados: Adicionar filtros de produtos por categoria, preço e artista para uma busca mais eficiente na loja.
+
+- Melhoria do Painel Administrativo: Criar um dashboard com gráficos de vendas, produtos mais vendidos e histórico de pedidos para o administrador.
+
+- Otimização do Carrinho: Permitir que o usuário aumente e diminua a quantidade de itens diretamente no carrinho de compras.
+
+- Sistema de Avaliações e Comentários: Adicionar um sistema onde os usuários possam avaliar e comentar sobre os produtos.
+
+- Automação de Testes: Implementar testes unitários e de integração para garantir a estabilidade e a qualidade do código.
+
+- Refatoração do Código: Melhorar a estrutura do código e remover dependências desnecessárias para aprimorar o desempenho.
+
+- Gerenciamento de usuários da empresa: O administrador pode criar o nome de usuário e a senha para novos funcionários.
+
+---
+
 ## 💻 Como Rodar a Aplicação
 
 ### Pré-requisitos
@@ -105,5 +124,5 @@ Certifique-se de ter instalados:
 ### Clonar o Repositório
 
 ```bash
-git clone [https://github.com/VBDeveloping/VB_Art_App.git](https://github.com/VBDeveloping/VB_Art_App.git)
+git clone [https://github.com/VBDeveloping/VB_Art_App.git]https://github.com/VBDeveloping/VB_Art_App.git
 cd VB_Art_App
