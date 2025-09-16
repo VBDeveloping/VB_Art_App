@@ -16,6 +16,67 @@ O **VB Art Shop** é uma aplicação web de e-commerce construída com foco em a
 
 ![VB Art Shop Cart](/frontend/public/Captura%20de%20tela%20%20Cart.png)
 
+## Estrutura do projeto
+
+## ⚙️ Backend (Node.js + Express + PostgreSQL)
+
+O backend é responsável por expor a API REST, autenticar usuários, gerenciar produtos, vendas e o carrinho.  
+Principais pontos encontrados no código:
+
+- **Autenticação com JWT**  
+- **Rotas protegidas** via middleware  
+- **Sequelize ORM** para integração com PostgreSQL  
+- **Models principais**: `User`, `Product`, `Sale`, `Cart`  
+- **Controllers** organizados por domínio (produtos, vendas, autenticação)  
+- **Migrações do banco** para criação das tabelas  
+
+### Rotas principais
+- `POST /api/login` → Autenticação de usuários  
+- `GET /api/products` → Listar produtos  
+- `POST /api/products` → Criar produto (admin)  
+- `POST /api/cart` → Adicionar item ao carrinho  
+- `GET /api/sales` → Listar vendas realizadas  
+- `POST /api/sales` → Registrar nova venda  
+
+---
+
+## 💻 Frontend (React)
+
+O frontend consome a API do backend e fornece uma interface moderna e funcional para o usuário.  
+Principais pontos encontrados no código:
+
+- **React + Hooks**  
+- **Context API** (`CartContext`) para gerenciar o estado global do carrinho  
+- **Axios** para comunicação com a API  
+- **Styled Components** para estilização  
+- **Páginas principais**:
+  - `Home` → vitrine de produtos  
+  - `Cart` → gerenciamento do carrinho  
+  - `Checkout` → resumo da compra e finalização  
+  - `Login` → autenticação do administrador  
+
+### Componentes principais
+- `Header` → topo da aplicação  
+- `Footer` → rodapé  
+- `CartList` → exibe os itens do carrinho  
+- `ProductDetailForm` → formulário de detalhes do produto  
+
+---
+
+## Painel Administrativo
+
+O projeto conta com uma página de administração acessível apenas a usuários autorizados.  
+Através deste painel é possível:
+
+- Inserir novos produtos (nome, preço, descrição, imagem, categoria).
+- Editar produtos existentes.
+- Excluir produtos.
+- Gerenciar o catálogo exibido no frontend em tempo real.
+
+Esse painel facilita o controle dos itens da loja, dispensando a necessidade de alterar dados diretamente no banco de dados.
+
+---
+
 ## 🛠️ Tecnologias Utilizadas
 
 ### Frontend
